@@ -71,10 +71,10 @@ var iBexMultiBookingFrameController = {
 		
 		// Build the booking page URL based on the query string
 		if(queryString.length > 0 && this.getURLParam('op').length > 0){
-			bookURL = 'http://ibex.seekom.com/accommodation/PropertySearch.php' + queryString;
+			bookURL = '//ibex.seekom.com/accommodation/PropertySearch.php' + queryString;
 		}
 		else {
-			bookURL = 'http://ibex.seekom.com/accommodation/PropertySearch.php?reset=true&op=' + ibOperatorID;
+			bookURL = '//ibex.seekom.com/accommodation/PropertySearch.php?reset=true&op=' + ibOperatorID;
 		}
 		
 		bookURL +=  '&hostma=' + window.escape(ibMsgAgentURL);
@@ -85,7 +85,7 @@ var iBexMultiBookingFrameController = {
 		// Safari iframe fixed
 		if(this.isSafariBrowser() && this.getURLParam('redirect').length === 0){
 			
-			var safariFixURL = 'http://ibex.seekom.com/accommodation/distributions/safari_cookie_fix.php',
+			var safariFixURL = '//ibex.seekom.com/accommodation/distributions/safari_cookie_fix.php',
 				redirectUrl = encodeURIComponent(location.href);
 			
 			window.location = safariFixURL + '?url=' + redirectUrl;
